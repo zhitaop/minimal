@@ -6,6 +6,9 @@
 
     <br> <div class="text-justify">{{ .Content }}</div>
 
+    <button onclick="topFunction()" id="topBtn" title="Go to top"><i class="fa fa-chevron-circle-up" style="font-size: 30px;"></i></button>
+    <button onclick="botFunction()" id="botBtn" title="Go to top"><i class="fa fa-chevron-circle-down" style="font-size: 30px;"></i></button>
+
     <!-- related posts with the same tags -->
     {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
 
@@ -27,4 +30,4 @@
 
 </main>
 
-{{ partial "footer.html" . }}
+{{ partial "singlefooter.html" . }}

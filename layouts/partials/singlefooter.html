@@ -1,0 +1,35 @@
+        <footer>
+
+            <p class="copyright text-muted">{{ .Site.Params.copyright | default "&copy; All rights reserved. Powered by [Hugo](https://gohugo.io) and [Minimal](https://github.com/calintat/minimal)" | markdownify }}</p>
+
+        </footer>
+       
+    </body>
+
+    <script>
+            window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("topBtn").style.display = "block";
+            } else {
+                document.getElementById("topBtn").style.display = "none";
+            }
+            if (document.body.scrollTop+700 > $(document).height() || document.documentElement.scrollTop+700 > $(document).height()) {
+                document.getElementById("botBtn").style.display = "none";
+            } else {
+                document.getElementById("botBtn").style.display = "block";
+            }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+        function botFunction() {
+            document.body.scrollTop = $(document).height(); // For Safari
+            document.documentElement.scrollTop = $(document).height();
+        }
+    </script>
+</html>

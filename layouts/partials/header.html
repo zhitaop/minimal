@@ -56,8 +56,10 @@
 
                     {{ if .Site.Menus.main }}
                         <ul class="nav navbar-nav">
+                            {{ $url := .URL}}
+                            {{ $myname := "Zhitao"}}
                             {{ range sort .Site.Menus.main }}
-                                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                            <li><a href="{{ .URL }}" {{if eq .URL $url}} style="color:#007FFF"{{end}} {{if eq .Name $myname}} class="myname"{{end}}>{{ .Name }}</a></li>                                
                             {{ end }}
                         </ul>
                     {{ end }}

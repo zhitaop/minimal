@@ -10,6 +10,40 @@
         --border-width: {{ if .Site.Params.showBorder | default false }} 5px {{ else }} 0 {{ end }};
     }
 
+   .myname {
+    font-size: 20px;
+    }
+    
+    #topBtn {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 60px; /* Place the button at the bottom of the page */
+        right: 20px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: transparent; /* Set a background color */
+        color:#777; /* Text color */ 
+    }
+    #botBtn {
+       
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 20px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: transparent; /* Set a background color */
+        color:#777; /* Text color */
+    }
+
+    #topBtn:hover {
+        color: #007FFF; /* Add a dark-grey background on hover */
+    }
+    #botBtn:hover {
+        color: #007FFF; /* Add a dark-grey background on hover */
+    }
+
 </style>
 
 <!-- main -->
